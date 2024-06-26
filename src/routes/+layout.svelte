@@ -16,11 +16,11 @@
 				<strong class="text-xl uppercase">Skeleton</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a class="btn btn-lg variant-filled-primary">Test</a>
 				<LightSwitch></LightSwitch>
+				<a class="btn btn-lg variant-filled-primary" href={'#'}>GPA</a>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
-	<slot />
+	<slot></slot>
 </AppShell>

@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { capitalizeString } from '$lib/index';
+
 	let myBreadcrumbs: { label: string; link: string }[];
 	$: {
 		let split = $page.url.pathname.split('/');
 		myBreadcrumbs = split.map((crumb, i) => {
 			return {
-				label: crumb,
+				label: capitalizeString(crumb),
 				link: split.slice(0, i + 1).join('/')
 			};
 		});
